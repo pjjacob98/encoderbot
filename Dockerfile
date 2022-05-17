@@ -12,7 +12,6 @@ RUN apk add --no-cache sudo cmake wget curl ffmpeg mkvtoolnix mediainfo
 RUN apk add --no-cache opencl-headers opencl-icd-loader-dev
 RUN apk add --no-cache autoconf automake libtool cython pkgconf git nasm yasm fftw-dev zlib-dev
 RUN apk add --no-cache x264 x264-dev x265 x265-dev libvpx libvpx-dev
-RUN pip3 install -U telegram-upload
 RUN git clone https://git.ffmpeg.org/ffmpeg.git ; cd ffmpeg ; ./configure --enable-gpl --enable-libx264 --enable-libx265 --enable-libvpx ; make ; make install ; rm -rfv ../ffmpeg
 RUN git clone https://github.com/sekrit-twc/zimg ; cd zimg ; ./autogen.sh ; ./configure ; make ; make install ; rm -rfv ../zimg
 RUN git clone https://github.com/vapoursynth/vapoursynth.git ; cd vapoursynth ; ./autogen.sh ; ./configure ; make ; make install ; rm -rfv ../vapoursynth
