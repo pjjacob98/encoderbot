@@ -10,7 +10,7 @@
 [GENERAL]
 
 ; token - This is bot auth token, necessary to connect bot to Telegram sevice.
-token=5327289207:AAEZ62bZ-nhs6RIaFIKguooHV-CQQpr1Z94
+token=5327289207:AAGoVpD2u3U23yhoqBD8NnLB6AZ6uQXGxAg
 
 ; password - New users will need to use it in order to access to the service.
 ; Logged users ID will be stored in users.txt. If there are users stored and
@@ -49,7 +49,7 @@ log_limit=500
 ; enable_root - Allow root access. If you want to enable root access,
 ; make sure you choose a strong password, since logged users will have total
 ; control of the computer. Change it to "True" (without quotes) to enable it.
-enable_root=False
+enable_root=True
 
 
 [USAGE]
