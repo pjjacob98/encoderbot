@@ -838,7 +838,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://test2-8xaw.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://encoder-bot.onrender.com/' + TOKEN)
     return "!", 200
 
 
