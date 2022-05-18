@@ -10,11 +10,10 @@ RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base boost-dev
 RUN apk add --no-cache sudo cmake wget curl ffmpeg mkvtoolnix mediainfo
 RUN apk add --no-cache opencl-headers opencl-icd-loader-dev
-RUN apk add --no-cache autoconf automake libtool cython pkgconf git nasm yasm fftw-dev zlib-dev
-RUN apk add --no-cache x264 x264-dev x265 x265-dev libvpx libvpx-dev
-RUN git clone https://git.ffmpeg.org/ffmpeg.git ; cd ffmpeg ; ./configure --enable-gpl --enable-libx264 --enable-libx265 --enable-libvpx ; make > /dev/null 2>&1 ; make install
+RUN apk add --no-cache autoconf automake libtool cython pkgconf git nasm yasm fftw-dev zlib-dev meson
 RUN git clone https://github.com/sekrit-twc/zimg ; cd zimg ; ./autogen.sh ; ./configure ; make > /dev/null 2>&1 ; make install
 RUN git clone https://github.com/vapoursynth/vapoursynth.git ; cd vapoursynth ; ./autogen.sh ; ./configure ; make > /dev/null 2>&1 ; make install
+RUN git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3 ; cd VapourSynth-EEDI3 ; meson build ; ninja -C build
 RUN wget -O adjust.py "https://www.googleapis.com/drive/v3/files/118lZQzqo6dHKLH_lTiXJMGOb6MJ7cwYi?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "adjust.py" "/usr/local/lib/python3.10/site-packages"
 RUN wget -O havsfunc.py "https://www.googleapis.com/drive/v3/files/115cp64FBg--UP5p-87_1Tc5bQW0VHPc9?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "havsfunc.py" "/usr/local/lib/python3.10/site-packages"
 RUN wget -O mvsfunc.py "https://www.googleapis.com/drive/v3/files/1147iKrs1vKzGfMvblA0L_2wVAIRiPG_l?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "mvsfunc.py" "/usr/local/lib/python3.10/site-packages"
