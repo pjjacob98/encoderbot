@@ -1,3 +1,2 @@
 pyTelegramBotApi
-flask
 telegram-upload
