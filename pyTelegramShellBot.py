@@ -838,7 +838,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://testpjweb.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url='https://encoder-bot.onrender.com/' + TOKEN)
     return "!", 200
 
 
