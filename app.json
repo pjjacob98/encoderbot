@@ -1,7 +1,0 @@
-{
-    "name": "enc",
-    "description": "test it",
-    "keywords": ["shell"],
-    "repository": "https://github.com/pjjacob98/encoderbot",
-    "stack": "container"
-}
