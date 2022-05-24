@@ -838,7 +838,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://encoderbot.osc-fr1.scalingo.io/' + TOKEN)
+    bot.set_webhook(url='https://worker-pjjacob98.cloud.okteto.net/' + TOKEN)
     return "!", 200
 
 
