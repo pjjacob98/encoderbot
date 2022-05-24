@@ -1,3 +1,4 @@
 pyTelegramBotApi
 telegram-upload
 speedtest-cli
+flask
