@@ -22,6 +22,7 @@ RUN wget -O mvsfunc.py "https://www.googleapis.com/drive/v3/files/102IJfWi0pxMca
 RUN wget -O nnedi3_resample.py "https://www.googleapis.com/drive/v3/files/104alWHFL008ZCgTBU-pFUzYrGVavv5mI?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "nnedi3_resample.py" "/usr/lib/python3.10/site-packages"
 RUN wget -O nnedi3aa.py "https://www.googleapis.com/drive/v3/files/1079Eo19JfZyfOZR2XZK_4Yk3aAzZMQaM?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "nnedi3aa.py" "/usr/lib/python3.10/site-packages"
 RUN git clone https://github.com/pjjacob98/libs
+RUN pip3 install pyTelegramBotApi
 
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
