@@ -5,7 +5,7 @@ RUN chmod 777 /usr/src/app
 
 RUN apk update
 RUN apk add --no-cache python3-dev
-RUN python -m ensurepip --upgrade
+RUN python3 -m ensurepip --upgrade
 RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base
 RUN apk add --no-cache boost-dev=1.77.0-r1 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/main
