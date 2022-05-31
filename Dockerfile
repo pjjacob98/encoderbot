@@ -5,6 +5,7 @@ RUN chmod 777 /usr/src/app
 
 RUN apk update
 RUN apk add --no-cache python3-dev
+RUN python3 --version
 RUN python3 -m ensurepip --upgrade
 RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base
