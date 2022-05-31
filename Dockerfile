@@ -23,7 +23,7 @@ RUN wget -O nnedi3aa.py "https://www.googleapis.com/drive/v3/files/1079Eo19JfZyf
 RUN git clone https://github.com/pjjacob98/libs
 
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3.10 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
