@@ -23,8 +23,6 @@ RUN wget -O nnedi3_resample.py "https://www.googleapis.com/drive/v3/files/104alW
 RUN wget -O nnedi3aa.py "https://www.googleapis.com/drive/v3/files/1079Eo19JfZyfOZR2XZK_4Yk3aAzZMQaM?alt=media&key=AIzaSyB3lrh7-RHcAZIZnc68i5_-sQdvmrDyIrw" ; mv "nnedi3aa.py" "/usr/lib/python3.10/site-packages"
 RUN git clone https://github.com/pjjacob98/libs
 
-ENV PYTHONPATH=/usr/local/lib/python3.10/site-packages
-
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
