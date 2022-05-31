@@ -24,6 +24,7 @@ RUN git clone https://github.com/pjjacob98/libs
 
 COPY requirements.txt .
 
+RUN python3 -m ensurepip --upgrade
 RUN pip3 install telegram-upload
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r requirements.txt
