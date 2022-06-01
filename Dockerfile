@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 RUN apk update
+RUN python3 --version
 RUN apk add --no-cache python3 py3-pip
 RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base
