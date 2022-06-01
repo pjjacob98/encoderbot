@@ -4,8 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 RUN apk update
-RUN python3 --version
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 python3-dev py3-pip
 RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base
 RUN apk add --no-cache boost-dev=1.77.0-r1 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/main
