@@ -4,10 +4,10 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 RUN apk update
-RUN apk add --no-cache python3 python3-dev py3-pip
 RUN apk add --no-cache bash procps cargo
 RUN apk add --no-cache build-base
 RUN apk add --no-cache boost-dev=1.77.0-r1 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/main
+RUN apk add --no-cache python3 python3-dev py3-pip
 RUN apk add --no-cache sudo cmake wget curl mkvtoolnix mediainfo
 RUN apk add --no-cache opencl-headers opencl-icd-loader-dev
 RUN apk add --no-cache autoconf automake libtool cython pkgconf git nasm yasm fftw-dev zlib-dev
