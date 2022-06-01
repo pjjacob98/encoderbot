@@ -3,9 +3,6 @@ import os
 import signal
 import re
 import subprocess
-
-from flask import Flask, request
-
 import telebot
 import time
 
@@ -477,7 +474,6 @@ def check_password(passwd):
 # Initialize bot
 initialize()
 bot = telebot.TeleBot(TOKEN)
-server = Flask(__name__)
 
 
 @bot.message_handler(commands=['start', 'help'])
@@ -827,20 +823,10 @@ def savePhoto(doc):
     bot.send_message(doc.chat.id, f"File saved as {file_path}")
 
 
-@server.route('/' + TOKEN, methods=['POST'])
-def getMessage():
-    json_string = request.get_data().decode('utf-8')
-    update = telebot.types.Update.de_json(json_string)
-    bot.process_new_updates([update])
-    return "!", 200
-
-
-@server.route("/")
-def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url='https://worker-pjjacob98.cloud.okteto.net/' + TOKEN)
-    return "!", 200
+def main():
+    bot.polling(none_stop=True)
 
 
 if __name__ == "__main__":
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 80)))
+    print("Bot running...")
+    main()
